@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes - Day 4</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>QuickNotes</h1>
+      <p>Write a note and track your progress.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Write a note</h2>
+
+        <label for="note-text">Your note</label>
+
+        <textarea
+          id="note-text"
+          rows="8"
+          maxlength="200"
+          placeholder="Type your note here..."
+        ></textarea>
+
+        <p id="char-count">0 / 200 characters</p>
+        <p id="word-count">0 words</p>
+
+        <div class="actions">
+          <button type="button" id="clear-btn">Clear</button>
+          <button type="button" id="theme-toggle">Dark mode</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes. Day 4 Web Foundations.</p>
+    </footer>
+  </body>
+</html>

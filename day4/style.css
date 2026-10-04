@@ -1,0 +1,161 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-bg: #f4f6f8;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --header-bg: #8e0000;
+  --header-text: #ffffff;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+  --button-bg: #0ba184;
+  --button-text: #ffffff;
+  --footer-text: #777777;
+  --warning-color: #d97706;
+  --over-color: #dc2626;
+}
+
+body.dark {
+  --page-bg: #15191d;
+  --text-color: #eeeeee;
+  --card-bg: #22272d;
+  --header-bg: #3a1111;
+  --header-text: #ffffff;
+  --input-bg: #1c2126;
+  --input-border: #555555;
+  --button-bg: #087b65;
+  --button-text: #ffffff;
+  --footer-text: #aaaaaa;
+  --warning-color: #f59e0b;
+  --over-color: #ef4444;
+}
+
+/* ---------- 2. Base page ---------- */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  line-height: 1.5;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* ---------- 3. Header ---------- */
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ---------- 4. Main and section ---------- */
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ---------- 5. Textarea ---------- */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font: inherit;
+  resize: vertical;
+}
+
+/* ---------- 6. Counters ---------- */
+
+#char-count,
+#word-count {
+  margin: 8px 0 0;
+}
+
+.warning {
+  color: var(--warning-color);
+}
+
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+/* ---------- 7. Buttons ---------- */
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #086f5a;
+}
+
+
+footer {
+  text-align: center;
+  color: var(--footer-text);
+  padding: 16px;
+}
+
+/* ---------- 9. Phones ---------- */
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 12px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
