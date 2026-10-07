@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>User Directory - Day 5</title>
+
+    <script src="users.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>User Directory</h1>
+      <p>Load users from a server and filter them without making another request.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="users-section-title">
+        <h2 id="users-section-title">Users</h2>
+
+        <button id="load-users" type="button">
+          Load Users
+        </button>
+
+        <div>
+          <label for="filter-input">Filter users by name</label>
+          <input
+            id="filter-input"
+            type="text"
+            placeholder="Type a name..."
+          />
+        </div>
+
+        <p id="status" aria-live="polite"></p>
+
+        <ul id="users-list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
